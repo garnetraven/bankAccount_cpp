@@ -2,13 +2,38 @@
 
 using namespace std;
 
+struct BankAccount;
+
 void print();
-void choices();
+void choices(BankAccount& myAccount);
+
+struct BankAccount
+{
+    double balance;
+    double deposit;
+    double withdraw;
+
+    double getBalance()
+    {
+        return balance;
+    }
+
+    double setBalance(double newBalance)
+    {
+        balance = newBalance;
+        return balance;
+    }
+};
 
 int main() 
 {
+    BankAccount myAccount;
+    double startingBalance = 1000.00;
+
+    myAccount.setBalance(startingBalance);
+
     print();
-    choices();
+    choices(myAccount);
 }
 
 /*
@@ -38,7 +63,7 @@ void print()
     *   returns: void
 
 */
-void choices()
+void choices(BankAccount& myAccount)
 {
     int choice;
     cout << "Enter your choice: ";
@@ -48,9 +73,10 @@ void choices()
     {
         case 1:
             cout << "Checking balance..." << endl;
+            cout << "Your balance is: " << myAccount.getBalance() << endl;
             break;
         case 2:
-            cout << "Depositing" << endl;
+            cout << "Depositing..." << endl;
             break;
         case 3:
             cout << "Withdrawing... " << endl;
@@ -62,15 +88,3 @@ void choices()
             cout << "Invalid choice!" << endl;
     }
 }
-
-struct BankAccount
-{
-    float balance;
-    float deposit;
-    float withdraw;
-
-    void checkBalance()
-    {
-        cout << "Your balance is: " << balance << endl;
-    }
-};
