@@ -43,7 +43,7 @@ void choices()
     int choice;
     cout << "Enter your choice: ";
     cin >> choice;
-    
+
     switch(choice)
     {
         case 1:
@@ -62,3 +62,15 @@ void choices()
             cout << "Invalid choice!" << endl;
     }
 }
+
+struct BankAccount
+{
+    float balance;
+    float deposit;
+    float withdraw;
+
+    void checkBalance()
+    {
+        cout << "Your balance is: " << balance << endl;
+    }
+};
