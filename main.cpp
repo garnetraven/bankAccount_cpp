@@ -10,6 +10,7 @@ int main()
     print();
     choices();
 }
+
 /*
     * Function: print
     * ----------------------------
@@ -42,6 +43,7 @@ void choices()
     int choice;
     cout << "Enter your choice: ";
     cin >> choice;
+    
     switch(choice)
     {
         case 1:
