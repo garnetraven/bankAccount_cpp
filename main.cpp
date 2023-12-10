@@ -7,6 +7,11 @@ struct BankAccount;
 void print();
 void choices(BankAccount& myAccount);
 
+/*
+    * Struct: BankAccount
+    * ----------------------------
+    *  Holds the balance, deposit, and withdraw of the user's bank account
+*/
 struct BankAccount
 {
     double balance;
