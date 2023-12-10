@@ -5,7 +5,7 @@ using namespace std;
 struct BankAccount;
 
 void print();
-void choices(BankAccount& myAccount);
+void choices(BankAccount myAccount);
 
 /*
     * Struct: BankAccount
@@ -68,7 +68,7 @@ void print()
     *   returns: void
 
 */
-void choices(BankAccount& myAccount)
+void choices(BankAccount myAccount)
 {
     int choice;
     cout << "Enter your choice: ";
