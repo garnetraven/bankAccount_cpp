@@ -3,7 +3,6 @@
 using namespace std;
 
 struct BankAccount;
-
 void print();
 void choices(BankAccount myAccount);
 
